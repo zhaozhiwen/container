@@ -1,0 +1,9 @@
+FROM sl:6
+
+RUN cd /etc/yum.repos.d/ \
+    && sed -i 's/scientific\//scientific\/obsolete\//g' sl.repo \
+    && sed -i 's/scientific\//scientific\/obsolete\//g' sl-other.repo \
+    && sed -i 's/scientific\//scientific\/obsolete\//g' sl6x.repo
+
+RUN yum install -y tcsh epel-release \
+    && yum install -y scons gcc-c++ gcc-gfortran cmake wget subversion git make file xterm
