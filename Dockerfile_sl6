@@ -7,3 +7,6 @@ RUN cd /etc/yum.repos.d/ \
 
 RUN yum install -y tcsh epel-release \
     && yum install -y scons gcc-c++ gcc-gfortran cmake wget subversion git make file xterm
+RUN yum install -y mesa-libGLU-11.0.7-4.el6.x86_64
+RUN yum install -y mesa-libGL-11.0.7-4.el6.x86_64
+RUN yum install -y libXi-1.7.8-1.el6.x86_64
