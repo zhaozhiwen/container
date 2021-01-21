@@ -5,4 +5,4 @@ RUN dnf install -y centos-release-stream \
   && dnf distro-sync -y
 
 RUN dnf install -y tcsh epel-release \
-    && dnf install -y gcc-c++ gcc-gfortran cmake wget subversion git make file xterm
+    && dnf install -y gcc-c++ gcc-gfortran cmake wget subversion git make file xterm nano
