@@ -1,4 +1,8 @@
 FROM centos:8
 
-RUN yum install -y tcsh epel-release \
-    && yum install -y gcc-c++ gcc-gfortran cmake wget subversion git make file xterm
+RUN dnf install -y centos-release-stream \
+  && dnf swap centos-{linux,stream}-repos \
+  && dnf distro-sync -y
+
+RUN dnf install -y tcsh epel-release \
+    && dnf install -y gcc-c++ gcc-gfortran cmake wget subversion git make file xterm
