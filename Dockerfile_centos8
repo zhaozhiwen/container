@@ -1,7 +1,7 @@
 FROM centos:8
 
 RUN dnf install -y centos-release-stream \
-  && dnf swap centos-{linux,stream}-repos \
+  && dnf swap -y centos-{linux,stream}-repos \
   && dnf distro-sync -y
 
 RUN dnf install -y tcsh epel-release \
